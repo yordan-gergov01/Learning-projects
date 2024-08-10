@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Colorize Table</title>
+</head>
+<body>
+    <table>
+        <tr><th>Name</th><th>Town</th></tr>
+        <tr><td>Eve</td><td>Sofia</td></tr>
+        <tr><td>Nick</td><td>Varna</td></tr>
+        <tr><td>Didi</td><td>Town</td></tr>
+        <tr><td>Tedy</td><td>Town</td></tr>
+    </table>
+    <button onclick="colorize()">Colorize</button>
+    <script>
+        function colorize(){
+            // let rowElements = document.querySelectorAll('tr:nth-of-type(2n) td'); //CSS selector
+
+            // rowElements.forEach(x => {
+            //     x.style.backgroundColor = 'teal';
+            // });
+
+            let rowElements = document.getElementsByTagName('tr');
+            let rows = Array.from(rowElements);
+
+            rows.forEach((x, i) => {
+                if(i % 2 !== 0){
+                    x.style.backgroundColor = 'teal';
+                }
+            });
+        }
+    </script>
+    
+</body>
+</html>

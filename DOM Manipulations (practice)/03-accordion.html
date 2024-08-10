@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Accordion</title>
+    <!-- <style>
+        
+        #accordion {
+            width: 300px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;               //this style is not write by me
+        }
+        .head {
+            background-color: #f1f1f1;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .button {
+            float: right;
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+        #extra {
+            display: none;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+    </style> -->
+</head>
+<body>
+    <div id="accordion">
+        <div class="head">DOM Manipulations Exercise <span class="button" onclick="toggle()">More</span></div>
+        <div id="extra">
+            <p>I love learn JavaScript and DOM Manipulations!</p>
+        </div>
+    </div>
+    <script>
+        function toggle(){
+            let button = document.querySelector('.button');
+            let text = document.querySelector('#extra');
+
+            if(button.textContent === 'More'){
+                button.textContent = 'Less';
+                text.style.display = 'block';
+            }else{
+                button.textContent = 'More';
+                text.style.display = 'none';
+            }
+        }
+    </script>
+    
+</body>
+</html>
