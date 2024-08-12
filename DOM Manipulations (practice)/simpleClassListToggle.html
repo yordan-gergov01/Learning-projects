@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classList Example</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv" class="box">Hello World</div>
+    <button onclick="toggleHighlight()">Toggle Highlight</button>
+
+    <script>
+        function toggleHighlight() {
+            let div = document.getElementById('myDiv');
+            div.classList.toggle('highlight');
+        }
+    </script>
+</body>
+</html>
